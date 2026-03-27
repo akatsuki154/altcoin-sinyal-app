@@ -1,31 +1,28 @@
-export default function SignalsPage() {
+import { useRouter } from "next/navigation";
+
+export default function Home() {
+  const router = useRouter();
+
   return (
-    <main style={{
-      minHeight: "100vh",
-      background: "#020617",
-      color: "white",
-      padding: "20px"
-    }}>
-      <h1 style={{ fontSize: "32px", marginBottom: "20px" }}>
-        📊 Sinyaller
-      </h1>
+    <main ...>
+      
+      ...
 
-      <div style={{
-        background: "#111827",
-        padding: "20px",
-        borderRadius: "10px",
-        marginBottom: "10px"
-      }}>
-        BTC/USDT - LONG 🚀
-      </div>
+      <button
+        onClick={() => router.push("/signals")}
+        style={{
+          marginTop: "30px",
+          padding: "12px 24px",
+          background: "#22c55e",
+          border: "none",
+          borderRadius: "8px",
+          fontSize: "16px",
+          cursor: "pointer"
+        }}
+      >
+        Sinyalleri Gör
+      </button>
 
-      <div style={{
-        background: "#111827",
-        padding: "20px",
-        borderRadius: "10px"
-      }}>
-        ETH/USDT - SHORT 🔻
-      </div>
     </main>
   );
 }
